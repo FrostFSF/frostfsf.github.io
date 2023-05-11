@@ -25,6 +25,7 @@ function addFunc(element) {
         iconDiv.appendChild(deleteIcon);
 
         listElement.innerText = textFieldValue;
+        listElement.classList.add('slide-right');
         listElement.appendChild(iconDiv);
         
         ulElement.append(listElement);
@@ -41,7 +42,11 @@ function checkThisList(element) {
 
 function deleteThisList(element) {
     const listElement = element.parentElement.parentElement;
-    listElement.remove();
+    listElement.classList.remove('slide-right');
+    listElement.classList.add('delete-poof');
+    setTimeout(() => {
+        listElement.remove();
+    }, 250);
 }
 
 function closePopUp(element) {
