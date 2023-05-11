@@ -112,7 +112,20 @@ body {
 }
 
 .to-do-list .checked {
+    animation: check-animation 0.5s ease;
     background-color: rgb(46, 200, 85);
+}
+
+@keyframes check-animation {
+    0% {
+        background-color: rgb(135, 172, 221);
+    }
+    50% {
+        background-color: rgb(135, 255, 165);
+    }
+    100% {
+        background-color: rgb(54, 231, 98);
+    }
 }
 
 .to-do-list .checked:hover {
@@ -198,6 +211,7 @@ body {
     50% {
         opacity: 0;
         transform: scale(1.4);
+        background-color: rgb(253, 99, 99);
     }
     100% {
         opacity: 0;
@@ -208,6 +222,10 @@ body {
     0% {
         opacity: 0;
         transform: translate(-10%);
+        background-color: rgb(40, 255, 40);
+    }
+    100%{
+        background-color: rgb(159, 197, 248);
     }
 }
 

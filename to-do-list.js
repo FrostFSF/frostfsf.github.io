@@ -43,6 +43,7 @@ function checkThisList(element) {
 function deleteThisList(element) {
     const listElement = element.parentElement.parentElement;
     listElement.classList.remove('slide-right');
+    listElement.classList.remove('checked');
     listElement.classList.add('delete-poof');
     setTimeout(() => {
         listElement.remove();
