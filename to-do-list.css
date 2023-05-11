@@ -1,0 +1,188 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(94, 172, 134);
+}
+
+.container {
+    background-color: aliceblue;
+    margin: 50px auto;
+    width: 700px;
+    min-height: 100px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 9px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.286);
+}
+
+.container-heading {
+    width: 100%;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.to-do-container {
+    /* background-color: antiquewhite; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.to-do-button-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.to-do-button-field input{
+    position: relative;
+    border: none;
+    padding: 10px 50% 10px 10px;
+    border-radius: 5px;
+    background-color: rgba(218, 218, 218, 0.339);
+    font-family: 'Poppins', sans-serif;
+    color: rgb(50, 50, 50);
+}
+
+.to-do-button-field input::placeholder {
+    color: rgb(109, 109, 109);
+}
+
+.to-do-button-field input:hover {
+    background-color: rgba(218, 218, 218, 0.661);
+}
+
+.to-do-button-field input:focus {
+    border-color: aliceblue;
+}
+
+.to-do-button-field button {
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.to-do-button-field button:hover {
+    transform: scale(0.98);
+    background-color: rgb(81, 202, 124);
+    color: rgb(238, 238, 239);
+}
+
+.to-do-list {
+    background-color: rgba(87, 87, 87, 0.116);
+    border-radius: 5px;
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.to-do-list ul {
+    list-style: none;
+}
+
+.to-do-list li {
+    background-color: rgb(159, 197, 248);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.to-do-list li:hover {
+    background-color: rgb(135, 172, 221);
+    cursor: auto;
+}
+
+.to-do-list .checked {
+    background-color: rgb(46, 200, 85);
+}
+
+.to-do-list .checked:hover {
+    background-color: rgb(54, 231, 98);
+}
+
+.to-do-list li i {
+    margin: 0px 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.to-do-list li div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.to-do-list .fa-trash:hover {
+    color: rgba(255, 0, 0, 0.781);
+}
+
+
+.to-do-list .fa-circle-check:hover {
+    color: rgb(0, 204, 71);
+}
+
+.to-do-list .inactive {
+    display: none;
+}
+
+.alert-container {
+    background-color: aliceblue;
+    width: 400px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-left: 5px solid rgb(228, 172, 4);
+    margin: 10px auto;
+    position: absolute;
+    top: 0%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.596);
+    left: 50%;
+    transform: translate(-50%);
+    animation: slide 1s ease;
+}
+
+@keyframes slide {
+    0% {
+        transform: translate(-50%,-70%);
+    }
+    50% {
+        transform: translate(-50%,20%);
+    }
+    100% {
+        transform: translate((-50%,200%));
+    }
+}
+
+.alert-container .alert-msg {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.close-popup i:hover {
+    cursor: pointer;
+    color: rgba(255, 0, 0, 0.804);
+}
+
+.inactive {
+    display: none;
+}
